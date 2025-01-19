@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Search Image</h1>
+        <div class="search_container">
+            <input id="search" type="text" placeholder="search" autocomplete="off">
+            <ul id="suggestions" class="suggestions-list"></ul>
+        </div>
+    </div>
+    <div id="loading" class="loading" style="display: none;">
+        <span class="dot">.</span>
+        <span class="dot">.</span>
+        <span class="dot">.</span>
+    </div>
+    <div id="page_container"></div>
+    <div id="error" style="display: block; color: red; font-size: 20px; left: 50%; top: 50%; z-index: 15;"></div>
+    <div class="pagebtn_container" style="display: none;z-index: 10;bottom: 10px;left:30%">
+        <div id="pagination">
+            <button onclick="startPage()">Start</button>
+            <button onclick="previousPage()" aria-label="Previous Page">Previous</button>
+            <ul class="Listbtn" role="navigation" aria-label="Pagination" onclick="activePage()">
+                <li class="link1">1</li>
+                <li class="link2">2</li>
+                <li class="link3">3</li>
+            </ul>
+            <button onclick="nextPage()" aria-label="Next Page">Next</button>
+            <button onclick="endPage()">End</button>
+        </div>
+    </div>
+    <!-- <br><br><br><br><br> -->
+</body>
+
+</html>
